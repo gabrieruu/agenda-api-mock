@@ -1,0 +1,136 @@
+{
+  "auth": [
+    {
+      "id": "1",
+      "username": "proprietario1",
+      "email": "prop1@example.com",
+      "password": "senha123",
+      "role": "user",
+      "token": "token123"
+    },
+    {
+      "id": "2",
+      "username": "proprietario2",
+      "email": "prop2@example.com",
+      "password": "senha456",
+      "role": "user",
+      "token": "token456"
+    },
+    {
+      "id": "3",
+      "username": "proprietario3",
+      "email": "prop1@example.com",
+      "password": "senha123",
+      "role": "owner",
+      "token": "token123"
+    },
+    {
+      "id": "4",
+      "username": "proprietario4",
+      "email": "prop2@example.com",
+      "password": "senha456",
+      "role": "owner",
+      "token": "token456"
+    }
+  ],
+  "establishments": [
+    {
+      "name": "Salão Beleza Total",
+      "address": "Avenida das Flores, 123",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Clinica Odontologica Sorriso Feliz",
+      "address": "Avenida Central, 45",
+      "ownerId": 4
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Corte de Cabelo",
+      "description": "Corte de cabelo masculino e feminino",
+      "price": 50,
+      "establishmentId": 1
+    },
+    {
+      "id": "2",
+      "name": "Manicure",
+      "description": "Serviço de manicure completo",
+      "price": 30,
+      "establishmentId": 1
+    },
+    {
+      "id": "3",
+      "name": "Atendimento Odontologico",
+      "description": "Atendiemtno odontologico completo",
+      "price": 5,
+      "establishmentId": 2
+    }
+  ],
+  "attendants": [
+    {
+      "id": "1",
+      "name": "Maria",
+      "role": "Cabelereira",
+      "establishmentId": 1
+    },
+    {
+      "id": "2",
+      "name": "Ana",
+      "role": "Manicure",
+      "establishmentId": 1
+    },
+    {
+      "id": "3",
+      "name": "Carlos",
+      "role": "Dentista",
+      "establishmentId": 2
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "clientName": "João",
+      "serviceId": 1,
+      "attendantId": 1,
+      "date": "2024-11-01T10:00:00",
+      "status": "confirmed"
+    },
+    {
+      "id": "2",
+      "clientName": "Mariana",
+      "serviceId": 2,
+      "attendantId": 2,
+      "date": "2024-11-01T11:00:00",
+      "status": "pending"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "recipientId": 1,
+      "message": "Seu agendamento foi confirmado!",
+      "sentAt": "2024-10-31T15:00:00"
+    }
+  ],
+  "rules": [
+    {
+      "id": "1",
+      "name": "Regra de Intervalo",
+      "description": "Intervalo mínimo de 30 minutos entre agendamentos",
+      "details": {
+        "minIntervalMinutes": 30
+      }
+    },
+    {
+      "id": "2",
+      "name": "Regra de Cancelamento",
+      "description": "Cancelamento permitido até 24 horas antes do agendamento",
+      "details": {
+        "cancelationWindowHours": 24
+      }
+    }
+  ]
+}
